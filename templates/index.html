@@ -1,0 +1,47 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Upload</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#upload-form').on('submit', function(event) {
+                event.preventDefault();
+                uploadImage();
+            });
+
+            function uploadImage() {
+                var formData = new FormData($('#upload-form')[0]);
+                $.ajax({
+                    url: '/',
+                    type: 'POST',
+                    data: formData,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        $('#image-display').attr('src', response.image_url);
+                        $('#message').text(response.message);
+                    },
+                    error: function() {
+                        $('#message').text('Error occurred while uploading the image.');
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Image Upload</h1>
+    <form id="upload-form" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <button type="submit">Upload</button>
+    </form>
+    <div>
+        <img id="image-display" src="" alt="Uploaded Image">
+        <p id="message"></p>
+        <p id="result"></p>
+    </div>
+</body>
+</html>

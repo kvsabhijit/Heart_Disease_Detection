@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300,600&display=swap');
+
+* {
+    font-family: 'Averia Serif Libre', cursive;
+}
+
+#Home {
+    height: 700px;
+    background-image: url('ecg_image.jpg');
+    /* border: 8px solid rgb(10, 228, 10); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 12px solid rgb(243, 10, 235);
+    border-radius: 30px; */
+}
+
+#features {
+    padding: 7% 15%;
+    background-color: #fff;
+    /* position: relative; */
+}
+
+.feature-box {
+    text-align: center;
+    padding: 5%;
+}
+
+h3 {
+    font-family: "Montserrat-Bold";
+    font-weight: bold;
+    /* color: orange; */
+}
+
+p {
+    color: #8f8f8f;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.icon {
+    color: green;
+    margin-bottom: 1rem;
+}
+
+
+.Home-heading {
+    font-size: 55px;
+    margin-top: 50px;
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+}
+
+.Home-subheading {
+    font-size: 45px;
+    margin-top: 0;
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: rgb(45, 43, 43);
+    padding: 10px;
+    /* border: 5px solid indigo; */
+}
+
+.navbar a {
+    color: #fff;
+    margin-left: 6px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar .navbar-brand {
+    padding-left: 10px;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(174, 3, 247);
+}
+
+#Upload {
+    /* margin-top: 20px; */
+    display: flex;
+    margin-left: 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: darkblue;
+    font-size: 25px;
+    margin-left: 10px;
+    /* background-color: darkviolet; */
+}
+
+#Upload h2 {
+    font-size: 40px;
+}
+
+.navbar .navbar-brand:hover {
+    color: rgb(174, 3, 247);
+    font-weight: bold;
+}
+
+input[type="file"] {
+    margin-left: 0;
+    margin-bottom: 10px;
+    padding: 15px;
+    padding-left: 190px;
+    border: none;
+    background-color: white;
+    /* border-radius: 5px; */
+    cursor: pointer;
+    color: rgb(255, 2, 255);
+    /* font-weight: bold; */
+}
+
+input[type="file"] button {
+    color: green;
+}
+
+/* input[type="file"]:hover {
+    background-color: #ebebeb;
+} */
+.button {
+    background-color: lightgreen;
+    color: brown;
+    border-radius: 40px;
+    border: none;
+    width: 92px;
+    height: 41px;
+    margin-top: 10px;
+}
+
+.button:hover {
+    color: brown;
+    font-weight: bold;
+}
+
+.hover-text1::after {
+    content: "Convolutional Neural Network";
+    color: indigo;
+    display: none;
+    font-size:20px;
+    position: absolute;
+    left:80%;
+  }
+  
+  .hover-text1:hover::after {
+    display: block;
+  }
+
+  .hover-text2::after {
+    content: "Electrocardiogram";
+    color: indigo;
+    display: none;
+    font-size:20px;
+    position: absolute;
+    top:40%;
+    left: 40%;
+  }
+  
+  .hover-text2:hover::after {
+    display: block;
+  }
+  
